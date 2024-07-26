@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-first',
@@ -11,6 +11,9 @@ export class FirstComponent {
 
   @Output("update")
   emitter: EventEmitter<number> = new EventEmitter<number>();
+
+  @Input("value")
+  value: number=0;
 
   updateValue(value: number) {
     this.emitter.emit(value);

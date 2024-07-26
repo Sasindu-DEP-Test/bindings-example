@@ -9,19 +9,19 @@
 </div>
 
 <div class="p-10 m-2 justify-between">
-  <app-first (update)="firstInput = $event"/>
+  <app-first [value]="firstInput" (update)="firstInput = $event"/>
   <hr>
 
 </div>
 
 <div class="p-10 m-2 justify-between">
 
-  <app-second [value]="firstInput"/>
+  <app-second [value]="firstInput" (update)="firstInput = $event"/>
   <hr>
 </div>
 
 <div class="p-10 m-2 justify-between">
-  <app-third [value]="firstInput"/>
+  <app-third [value]="firstInput " (update)="firstInput = $event"/>
 
 </div>
 

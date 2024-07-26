@@ -12,10 +12,10 @@ export class ThirdComponent {
   @Input("value")
   value: number = 20;
 
-  @Output() update = new EventEmitter<unknown>();
+  @Output("update")
+  emitter: EventEmitter<number> = new EventEmitter<number>();
 
-
-  updateValue(valueAsNumber: number) {
-
+  updateValue(value: number) {
+    this.emitter.emit(value);
   }
 }

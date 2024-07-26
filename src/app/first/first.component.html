@@ -1,5 +1,5 @@
 <div class="p-2 justify-center">
 <input type="number" class="border rounded p-2 border-black text-center" #number
-       min="0" max="100"
+       min="0" max="100" [value]="value"
        (input)="updateValue(number.valueAsNumber)">
 </div>
