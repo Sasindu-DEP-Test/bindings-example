@@ -1,0 +1,35 @@
+<div class="p-10 m-2 justify-between">
+  <h1>{{ firstInput / 100 | percent: '0.1-4' }}</h1>
+
+  <div class="progress h-4 bg-gray-200 rounded">
+    <div class="progress-bar bg-blue-500 h-full rounded-l" [style.width]="firstInput + '%'"></div>
+  </div>
+
+  <hr>
+</div>
+
+<div class="p-10 m-2 justify-between">
+  <app-first (update)="firstInput = $event"/>
+  <hr>
+
+</div>
+
+<div class="p-10 m-2 justify-between">
+
+  <app-second [value]="firstInput"/>
+  <hr>
+</div>
+
+<div class="p-10 m-2 justify-between">
+  <app-third [value]="firstInput"/>
+
+</div>
+
+<br>
+
+<div class="p-10 m-2 justify-between">
+  <hr>
+  <app-fourth [value]="firstInput"/>
+</div>
+
+
